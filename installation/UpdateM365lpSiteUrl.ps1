@@ -19,7 +19,7 @@ $AdminURL = "https://$TenantName.sharepoint.com"
 
 # Check if M365 LP Site Url was passed in
 if (!([system.uri]::IsWellFormedUriString($M365LPSiteUrl, [System.UriKind]::Absolute))) {
-  Write-Host "$M365LPSiteUrl is not a valid URL."  -BackgroundColor Black -ForegroundColor Red
+  Write-Host "'$M365LPSiteUrl' is not a valid site URL."  -BackgroundColor Black -ForegroundColor Red
   Clear-Variable M365LPSiteUrl
 }
 if ([string]::IsNullOrWhitespace($M365LPSiteUrl)) {
